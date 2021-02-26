@@ -1,0 +1,27 @@
+
+
+.content{
+    border-bottom: 2px solid var(--gray-line);
+    padding-bottom: 18px;
+    display: flex;
+    width: 390px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 56px;
+}
+
+.content > p{
+    color: var(--text);
+    font-weight: 500;
+    font-family: "Inter";
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+
+.content > span {
+    color: var(--text);
+    font-weight: 500;
+    font-family: "Inter";
+    font-size: 24px;
+}

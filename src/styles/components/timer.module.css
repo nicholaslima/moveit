@@ -1,0 +1,54 @@
+
+
+.content{
+    display: flex;
+    flex-direction: column;
+    margin-top: 56px;
+    width: 389px;
+    margin-bottom: 22px;
+}
+
+.content > button{
+    background-color: var(--blue);
+    border-radius: 5px;
+    font-family: "Inter";
+    font-size: 20px;
+    font-weight: 600;
+    padding: 28px 106px;
+    color: var(--white);
+    border-width: 0px;
+    margin-top: 32px;
+}
+
+.content > button:hover{
+    background-color: var(--blue-dark);
+}
+
+
+.content > .counter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.digito{
+    background-color: var(--white);
+    border-radius: 5px;
+    margin: 1px;
+    flex: 1;
+    text-align: center;
+    color: var(--title);
+    font-family: Rajdhani;
+    font-weight: 600;
+    font-size: 120px;
+
+}   
+
+.separador{
+    font-family: Rajdhani;
+    font-weight: 600;
+    font-size: 120px;
+    margin: 8px;
+    color: var(--title);
+}

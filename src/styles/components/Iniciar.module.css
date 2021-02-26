@@ -1,0 +1,35 @@
+
+.content{
+    background-color: var(--white);
+    border-radius: 5px;
+    border-width: 0px;
+    padding: 110px;
+    width: 468px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.content > img{
+    height: 66px;
+    margin-top: 64px;
+    margin-bottom: 34px;
+}
+
+.title{
+    font-size: 24px;
+    font-family: Inter;
+    font-weight: 500;
+    line-height: 34px;
+    color: var(--title);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.description{
+    font-size: 16px;
+    font-family: Inter;
+    line-height: 26px;
+    color: var(--text);
+    text-align: center;
+}
