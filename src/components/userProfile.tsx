@@ -12,7 +12,7 @@ const UserProfile: React.FC = () => {
             <div className={ styles.details } >
                 <p className={ styles.name }>nicholas caetano</p>
                 <div>
-                    <img className={ styles.icon } src="icons/level-up.svg" alt="icone"/>
+                    <img className={ styles.icon } src="icons/level.svg" alt="icone"/>
                     <p className={ styles.level }>level 1</p>
                 </div>
             </div>

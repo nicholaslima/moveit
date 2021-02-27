@@ -3,12 +3,13 @@
 .content{
     display: flex;
     flex-direction: column;
+
     margin-top: 56px;
     width: 389px;
     margin-bottom: 22px;
 }
 
-.content > button{
+.content > .btnIniciar{
     background-color: var(--blue);
     border-radius: 5px;
     font-family: "Inter";
@@ -18,37 +19,88 @@
     color: var(--white);
     border-width: 0px;
     margin-top: 32px;
+    transition: background-color 0.5s;
 }
+
+.content > .btnAbandonar{
+    background-color: var(--white);
+    border-radius: 5px;
+    font-family: "Inter";
+    font-size: 20px;
+    font-weight: 600;
+    padding: 28px 106px;
+    color: var(--text);
+    border-width: 0px;
+    margin-top: 32px;
+    transition: background-color 0.5s;
+}
+
+.content > .btnFinalizado{
+    background-color: var(--white);
+    border-radius: 5px;
+    font-family: "Inter";
+    border-bottom: 5px solid var(--green);
+    font-size: 20px;
+    font-weight: 600;
+    padding: 28px 106px;
+    color: var(--text);
+    margin-top: 32px;
+    transition: background-color 0.5s;
+}
+
+
+.content > .btnAbandonar:hover{
+    background-color: var(--red);
+    border-radius: 5px;
+    font-family: "Inter";
+    font-size: 20px;
+    font-weight: 600;
+    padding: 28px 106px;
+    color: var(--white);
+    border-width: 0px;
+    margin-top: 32px;
+    transition: background-color 0.5s;
+} 
 
 .content > button:hover{
     background-color: var(--blue-dark);
 }
-
-
-.content > .counter{
+.counter{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
     align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+
+    font-weight: 600;
+    color: var(--title);
+    font-family: Rajdhani;
 }
 
-.digito{
+.counter > div{
     background-color: var(--white);
     border-radius: 5px;
     margin: 1px;
-    flex: 1;
-    text-align: center;
-    color: var(--title);
-    font-family: Rajdhani;
-    font-weight: 600;
-    font-size: 120px;
 
+    flex: 1;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+
+    font-size: 8.5rem;
+    box-shadow: 0 0 60px rgba(0,0,0,0.05);
 }   
+
+.counter > div p:first-child{
+    border-right: 1px solid #f0f1f3;
+}
+
+
 
 .separador{
     font-family: Rajdhani;
     font-weight: 600;
-    font-size: 120px;
-    margin: 8px;
+    font-size: 6.25rem;
+    margin: 0 0.5rem;
     color: var(--title);
 }

@@ -1,9 +1,9 @@
 
 
 import React from 'react';
-import styles from '../styles/components/Iniciar.module.css';
+import styles from '../styles/components/challengeBox.module.css';
 
-const Iniciar: React.FC = () => {
+const challengeBox: React.FC = () => {
     return(
         <div className={ styles.content }>
             <p className={ styles.title }>Inicie um ciclo para receber desafios</p>
@@ -13,4 +13,4 @@ const Iniciar: React.FC = () => {
     )
 }
 
-export default Iniciar;
+export default challengeBox;
