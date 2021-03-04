@@ -3,7 +3,7 @@
 
 import React,{ useState,useCallback,useEffect } from 'react';
 import styles from '../styles/components/timer.module.css';
-
+import { useChallengeBox } from '../contexts/challengeBoxContext';
 
 let idTimeOut : NodeJS.Timeout;
 
@@ -17,6 +17,9 @@ const Timer: React.FC = () => {
 
     const [ minuteLeft,minuteRight ] = String(minutes).padStart(2,'0').split('');
     const [ secondLeft,secondRight ] = String(seconds).padStart(2,'0').split('');
+
+
+    const { startNewChallenge  } = useChallengeBox();
 
     const iniciarCiclo = useCallback(() => {
         setIsCounting(true);
@@ -36,6 +39,7 @@ const Timer: React.FC = () => {
         }else if(isCounting && time === 0){
             setHasFinshed(true);
             setIsCounting(false);
+            startNewChallenge();
         }
    },[time,isCounting]);
 

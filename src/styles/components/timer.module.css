@@ -39,7 +39,8 @@
     background-color: var(--white);
     border-radius: 5px;
     font-family: "Inter";
-    border-bottom: 5px solid var(--green);
+    border-width: 0px 0px 4px 0px;
+    border-color: var(--green);
     font-size: 20px;
     font-weight: 600;
     padding: 28px 106px;
@@ -48,6 +49,10 @@
     transition: background-color 0.5s;
 }
 
+.content > .btnFinalizado:hover{
+    cursor: not-allowed;
+
+}
 
 .content > .btnAbandonar:hover{
     background-color: var(--red);
@@ -62,7 +67,7 @@
     transition: background-color 0.5s;
 } 
 
-.content > button:hover{
+.content > .btnIniciar:hover{
     background-color: var(--blue-dark);
 }
 .counter{
