@@ -3,46 +3,22 @@
 
 import React,{ useState,useCallback,useEffect } from 'react';
 import styles from '../styles/components/timer.module.css';
-import { useChallengeBox } from '../contexts/challengeBoxContext';
+import { useTimerContext } from '../contexts/timerContext';
 
 let idTimeOut : NodeJS.Timeout;
 
 const Timer: React.FC = () => {
-    const [ isCounting,setIsCounting ] = useState(false);
-    const [ time ,setTime ] = useState(0.1 * 60);
-    const [ hasFinished,setHasFinshed ] = useState(false);
+    const { 
+        minutes,
+        seconds,
+        iniciarCiclo,
+        hasFinished,
+        isCounting,
+        pararCiclo 
+    } = useTimerContext();
  
-    const minutes = Math.floor(time / 60);
-    const seconds = time % 60;
-
     const [ minuteLeft,minuteRight ] = String(minutes).padStart(2,'0').split('');
     const [ secondLeft,secondRight ] = String(seconds).padStart(2,'0').split('');
-
-
-    const { startNewChallenge  } = useChallengeBox();
-
-    const iniciarCiclo = useCallback(() => {
-        setIsCounting(true);
-    },[setIsCounting]);
-
-    const pararCiclo = useCallback(() => {
-        clearTimeout(idTimeOut);
-        setIsCounting(false);
-        setTime( 25 * 60 );
-    },[setIsCounting]);
-
-   useEffect(() => {
-        if(isCounting && time > 0 ){
-            idTimeOut = setTimeout(() => {
-                setTime( time - 1 );
-            },1000);
-        }else if(isCounting && time === 0){
-            setHasFinshed(true);
-            setIsCounting(false);
-            startNewChallenge();
-        }
-   },[time,isCounting]);
-
 
     return(
         <div className={ styles.content }>

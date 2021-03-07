@@ -1,11 +1,23 @@
 
 
-import React from 'react';
+import React,{useCallback} from 'react';
 import styles from '../styles/components/challengeBox.module.css';
 import {  useChallengeBox } from '../contexts/challengeBoxContext';
+import {  useTimerContext } from '../contexts/timerContext';
 
 const challengeBox: React.FC = () => {
-    const { currentChallenge,resetChallenge } = useChallengeBox();
+    const { currentChallenge,resetChallenge,completeChallenge } = useChallengeBox();
+    const { pararCiclo } = useTimerContext();
+
+    function finalChallenge(){
+        completeChallenge();  
+        pararCiclo();
+    };
+
+    function FailChallenge(){
+        resetChallenge();
+        pararCiclo();
+    };
 
 
     return(
@@ -21,11 +33,15 @@ const challengeBox: React.FC = () => {
 
                     <div className={ styles.btns }>
                         <button 
-                        className={ styles.btnRed }
-                        onClick={ resetChallenge }
+                            className={ styles.btnRed }
+                            onClick={ FailChallenge }
                         >Falhei
                         </button>
-                        <button className={ styles.btnGreen }>Completei</button>
+
+                        <button 
+                            className={ styles.btnGreen }
+                            onClick={ finalChallenge  }
+                        >Completei</button>
                     </div>
                 </>
             ):(
