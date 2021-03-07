@@ -19,7 +19,7 @@
 <br>
 
 <p align="center">
-  <img alt="Happy" src=".github/moveit.png" width="100%">
+  <img alt="moveit" src=".github/moveit.png" width="100%">
 </p>
 
 ## ✨ Tecnologias
@@ -52,5 +52,5 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para
 
 ---
 
-Feito com ♥ by Nicholas Lima 👋🏻 [Twitter!](https://www.linkedin.com/in/nicholas-lima-a360311bb/)
+Feito com ♥ by Nicholas Lima 👋🏻 [Linkedin!](https://www.linkedin.com/in/nicholas-lima-a360311bb/)
 
