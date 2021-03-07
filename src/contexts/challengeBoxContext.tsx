@@ -2,7 +2,6 @@
 
 import React, { useContext,
     createContext,
-    useCallback,
     useState,
     ReactNode,
     useEffect } from 'react';
@@ -66,12 +65,12 @@ function ChallengeBoxProvider({
         Cookies.set('challengesCompleted', String(challengesCompleted));
     },[challengesCompleted,level,currentExperiences]);
 
-    const levelUp = useCallback(() => {
+    function levelUp(){
         setLevel(level + 1);
         setIsLevelUpModalOpen(true);
-    },[]);
+    };
 
-    const startNewChallenge = useCallback( () => {
+    function startNewChallenge(){
         const idChallenge =  Math.floor(Math.random() * dados.length);
         const challenge = dados[idChallenge];
         setCurrentChallenge(challenge);
@@ -83,16 +82,16 @@ function ChallengeBoxProvider({
                 body: `valendo ${challenge.amount } xp`
             });
         }
-    },[]);
+    };
 
     function closeLevelModal(){
         setIsLevelUpModalOpen(false);
     }
 
 
-    const resetChallenge = useCallback(() => {
+    function resetChallenge(){
         setCurrentChallenge(null);
-    },[]);
+    };
 
     function completeChallenge(){
 

@@ -1,6 +1,6 @@
 
 
-import React,{ createContext,useContext,useEffect,useState,useCallback } from 'react';
+import React,{ createContext,useContext,useEffect,useState } from 'react';
 import { useChallengeBox  } from './challengeBoxContext';
 
 interface TimerContextType{
@@ -19,7 +19,7 @@ let idTimeOut : NodeJS.Timeout;
 const TimerProvider:React.FC = ({ children }) => {
 
     const [ isCounting,setIsCounting ] = useState(false);
-    const [ time ,setTime ] = useState(0.1 * 60);
+    const [ time ,setTime ] = useState(25 * 60);
     const [ hasFinished,setHasFinshed ] = useState(false);
  
     const minutes = Math.floor(time / 60);
