@@ -1,11 +1,11 @@
 
 
 
-import React,{ useState,useCallback,useEffect } from 'react';
+import React from 'react';
 import styles from '../styles/components/timer.module.css';
 import { useTimerContext } from '../contexts/timerContext';
 
-let idTimeOut : NodeJS.Timeout;
+
 
 const Timer: React.FC = () => {
     const { 

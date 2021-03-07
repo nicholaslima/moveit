@@ -20,8 +20,6 @@ const UserProfile: React.FC = () => {
                     <p className={ styles.level }>level { level }</p>
                 </div>
             </div>
-           
-
         </div>
     )
 }

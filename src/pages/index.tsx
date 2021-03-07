@@ -1,4 +1,4 @@
-import Head from 'next/head';
+
 
 import { GetServerSideProps } from 'next';
 import Progressbar from '../components/header';

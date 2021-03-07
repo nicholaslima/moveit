@@ -1,6 +1,6 @@
 
 
-import React,{useCallback} from 'react';
+import React from 'react';
 import styles from '../styles/components/challengeBox.module.css';
 import {  useChallengeBox } from '../contexts/challengeBoxContext';
 import {  useTimerContext } from '../contexts/timerContext';
